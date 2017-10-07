@@ -12,6 +12,7 @@ router.get('/userlist', function(req, res) {
 
 router.get('/api', function(req, res) {
   console.log("we are in the get request");
+  res.render('index');
   // var fullname = req.param('firstname');
   // var email = req.param('email');
   // var username = req.param('username');
@@ -22,6 +23,7 @@ router.get('/api', function(req, res) {
 
 router.post('/api', function(req, res) {
     console.log("we are in the post request");
+    res.render('index');
     // var fullname = req.body.firstname;
     // var email = req.body.email;
     // var username = req.body.username;
