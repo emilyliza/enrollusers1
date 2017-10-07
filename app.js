@@ -5,14 +5,17 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 // Database
+var MONGODB_URI = "mongodb://heroku_6stlf8db:9nbq506svedvuspaac3ov63hll@ds113785.mlab.com:13785/heroku_6stlf8db";
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/nodetest2');
+var db = monk(MONGODB_URI || 'localhost:27017/nodetest2');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
