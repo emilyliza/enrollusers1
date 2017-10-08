@@ -59,3 +59,17 @@ fieldset {
 input {
   padding: 10px;
 }
+
+label {
+  float:left;
+  width:10%;
+  margin-right:0.5em;
+  padding-top:0.5em;
+  text-align:right;
+}
+#btnAddUser {
+  margin-left: 12em;
+  font-weight:bold;
+  padding: 10px;
+
+}
