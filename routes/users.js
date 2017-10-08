@@ -37,12 +37,9 @@ router.get('/api', function(req, res) {
 });
 
 router.post('/api', function(req, res) {
-    console.log("we are in the post request");
-    var fullname = req.body.firstname;
-    var email = req.body.email;
-    var username = req.body.username;
-    //
-    res.json(req);
+    console.log(req.body);
+
+    res.json(req.body);
 });
 
 module.exports = router;
