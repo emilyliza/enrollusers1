@@ -2,7 +2,8 @@ extends layout
 
 block content
     h1= title
-    p Welcome to our test
+    h3 Welcome to GCI 2018!
+    br
 
     // Wrapper
     #wrapper
@@ -14,14 +15,14 @@ block content
                 strong Name:
                 |  <span id='userInfoName'></span>
                 br
-                strong Age:
-                |  <span id='userInfoAge'></span>
+                strong Username:
+                |  <span id='userInfoUsername'></span>
                 br
-                strong Gender:
-                |  <span id='userInfoGender'></span>
+                strong Cohort:
+                |  <span id='userInfoCohort'></span>
                 br
-                strong Location:
-                |  <span id='userInfoLocation'></span>
+                strong Country:
+                |  <span id='userInfoCountry'></span>
         // /USER INFO
 
         // USER LIST
@@ -30,7 +31,8 @@ block content
             table
                 thead
                     th UserName
-                    th Email
+                    th Full Name
+                    th Cohort
                     th Delete?
                 tbody
         // /USER LIST
@@ -38,14 +40,16 @@ block content
         h2 Add User
         #addUser
             fieldset
-                input#inputUserName(type='text', placeholder='Username')
+                input#inputUserFirstname(type='text', placeholder='First Name')
+                br
+                input#inputUserLastname(type='text', placeholder='Last Name')
+                br
                 input#inputUserEmail(type='text', placeholder='Email')
                 br
-                input#inputUserFullname(type='text', placeholder='Full Name')
-                input#inputUserAge(type='text', placeholder='Age')
+                input#inputUserCountry(type='text', placeholder='Country')
                 br
-                input#inputUserLocation(type='text', placeholder='Location')
-                input#inputUserGender(type='text', placeholder='Gender')
+                input#inputUserCohort(type='text', placeholder='Cohort')
+                br
                 br
                 button#btnAddUser Add User
         // /ADD USER
