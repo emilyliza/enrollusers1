@@ -9,6 +9,7 @@ router.get('/userlist', function(req, res) {
         res.json(docs);
     });
 });
+
 router.post('/adduser', function(req, res) {
     var db = req.db;
     var collection = db.get('userlist');
@@ -20,11 +21,9 @@ router.post('/adduser', function(req, res) {
 });
 
 router.get('/api', function(req, res) {
-  var db = req.db;
-  var collection = db.get('userlist');
-  collection.find({},{},function(e,docs){
-      res.json(docs);
-  });
+
+    res.json({name: "Emily"});
+
   // console.log("we are in the get request");
   // res.render('index');
   // // var fullname = req.param('firstname');
@@ -43,7 +42,7 @@ router.post('/api', function(req, res) {
     var email = req.body.email;
     var username = req.body.username;
     //
-    res.send(fullname + ' ' + email + ' ' + username);
+    res.json(req);
 });
 
 module.exports = router;
