@@ -12,10 +12,7 @@
   });
 
   router.post('/adduser', function(req, res) {
-    req.app.io.emit("user data", {data: req.body});
-    // req.app.io.on('connection', function(){
-    //   req.app.io.emit('my other event2', { data: req.body });
-    // });
+      req.app.io.emit("user data", {data: req.body});
       var db = req.db;
       var collection = db.get('userlist');
       collection.insert(req.body, function(err, result){
@@ -26,6 +23,7 @@
   });
 
   router.post('/api', function(req, res) {
+    req.app.io.emit("user data", {data: req.body});
     var db = req.db;
     var collection = db.get('userlist');
     collection.insert(req.body, function(err, result){
