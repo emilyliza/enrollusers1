@@ -7,3 +7,15 @@ html
         block content
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
         script(src='/javascripts/global.js')
+        script(src='/javascripts/moodle.js')
+        script(src="/socket.io/socket.io.js")
+        script.
+          var socket = io();
+          socket.on('connect', function(){
+            socket.on('user data', function (data) {
+              moodleUser(data);
+              console.log("here's the user ", data);
+            });
+          });
+          socket.on('event', function(){});
+          socket.on('disconnect', function(){});

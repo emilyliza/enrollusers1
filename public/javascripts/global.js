@@ -1,5 +1,10 @@
+
 // Userlist data array for filling in info box
 var userListData = [];
+
+function function_test(data){
+  console.log("I am a cool function ", data);
+}
 
 // DOM Ready
 $(document).ready(function() {
